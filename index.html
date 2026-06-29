@@ -4,8 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caleb Lee</title>
-<meta name="description" content="Caleb Lee - Marketing Consultant & Financial Planner">
+<meta name="description" content="Caleb Lee - Marketing Consultant & Insurance & Financial Planner">
 <meta name="theme-color" content="#f7f6f3">
+<!-- Open Graph -->
+<meta property="og:title" content="Caleb Lee | 李俊堅 — Marketing Consultant &amp; Financial Planner">
+<meta property="og:description" content="Marketing Consultant · Insurance &amp; Financial Planner — Based in Hong Kong. Connect with Caleb for marketing strategy and financial planning.">
+<meta property="og:image" content="https://caleb530lee.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Caleb Lee — Marketing Consultant &amp; Financial Planner">
+<meta property="og:url" content="https://caleb530lee.github.io">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_HK">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="Caleb Lee">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Caleb Lee | 李俊堅 — Marketing Consultant &amp; Financial Planner">
+<meta name="twitter:description" content="Marketing Consultant · Insurance &amp; Financial Planner — Based in Hong Kong.">
+<meta name="twitter:image" content="https://caleb530lee.github.io/og-image.png">
+<meta name="twitter:image:alt" content="Caleb Lee — Marketing Consultant &amp; Financial Planner">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -16,7 +35,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Not
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 button{border:none;background:none;cursor:pointer;font:inherit;color:inherit}
-[data-lang]:not(.active){display:none}
+
 .container{max-width:420px;margin:0 auto;padding:0 20px}
 .divider{display:flex;align-items:center;gap:10px;margin-bottom:16px}
 .divider .line{flex:1;height:1px;background:#e2dfda}
@@ -51,15 +70,27 @@ button{border:none;background:none;cursor:pointer;font:inherit;color:inherit}
 </style>
 </head>
 <body>
+<script>(function(){
+  var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+  if(lang.startsWith('zh-cn')||lang.startsWith('zh-sg')||lang.startsWith('zh-my')||lang==='zh'){lang='zh-CN'}
+  else if(lang.startsWith('zh-hk')||lang.startsWith('zh-tw')||lang.startsWith('zh-mo')){lang='zh-HK'}
+  else{lang='en'}
+  var s=document.createElement('style');
+  s.textContent='[data-lang]:not([data-lang="'+lang+'"]){display:none!important}';
+  document.head.appendChild(s);
+  document.documentElement.setAttribute('lang',lang);
+  window.__lang=lang;
+})();
+</script>
 
 <div class="hero">
-  <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='68' viewBox='0 0 68 68'%3E%3Crect width='68' height='68' fill='%23e8e5e0' rx='34'/%3E%3Ctext x='34' y='42' text-anchor='middle' font-family='-apple-system,sans-serif' font-size='19' font-weight='600' fill='%23a09893'%3ECL%3C/text%3E%3C/svg%3E" alt="Caleb Lee">
+  <img class="avatar" src="https://media.licdn.com/dms/image/v2/D5603AQH5OqYjtCYHxw/profile-displayphoto-crop_800_800/B56ZkzfDhFKwAM-/0/1757505403516?e=1784160000&v=beta&t=w-9eOMGCVvvtxZKXGtCl87ZL2vGf_59YUOucFqPueOY" alt="Caleb Lee">
   <h1 class="name active" data-lang="en">Caleb Lee</h1>
-  <h1 class="name" data-lang="zh-HK">李凱立</h1>
-  <h1 class="name" data-lang="zh-CN">李凯立</h1>
-  <p class="role active" data-lang="en">Marketing Consultant · Financial Planner</p>
-  <p class="role" data-lang="zh-HK">市場營銷顧問 · 理財規劃師</p>
-  <p class="role" data-lang="zh-CN">市场营销顾问 · 理财规划师</p>
+  <h1 class="name" data-lang="zh-HK">李俊堅</h1>
+  <h1 class="name" data-lang="zh-CN">李俊坚</h1>
+  <p class="role active" data-lang="en">Marketing Consultant · Insurance & Financial Planner</p>
+  <p class="role" data-lang="zh-HK">市場營銷顧問 · 保險理財規劃顧問</p>
+  <p class="role" data-lang="zh-CN">市场营销顾问 · 保险理财规划师</p>
 </div>
 
 <div class="container">
@@ -141,26 +172,16 @@ button{border:none;background:none;cursor:pointer;font:inherit;color:inherit}
 </div>
 
 <div class="footer">
-  <p class="active" data-lang="en">&copy; 2026 Incense Studio</p>
-  <p data-lang="zh-HK">&copy; 2026 馨香工作室</p>
-  <p data-lang="zh-CN">&copy; 2026 馨香工作室</p>
+  <p class="active" data-lang="en">&copy; Designed by Incense Studio.</p>
+  <p data-lang="zh-HK">&copy; 馨香工作室設計</p>
+  <p data-lang="zh-CN">&copy; 由馨香工作室设计。</p>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-(function() {
-  var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-  if (lang.startsWith('zh-cn') || lang.startsWith('zh-sg') || lang.startsWith('zh-my') || lang === 'zh') {
-    lang = 'zh-CN';
-  } else if (lang.startsWith('zh-hk') || lang.startsWith('zh-tw') || lang.startsWith('zh-mo')) {
-    lang = 'zh-HK';
-  }
-  document.querySelectorAll('[data-lang]').forEach(function(el) {
-    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
-  });
-  document.documentElement.setAttribute('lang', lang);
-
+(function(){
+  var lang = window.__lang || 'en';
   var saveBtn = document.getElementById('saveContact');
   if (saveBtn) {
     saveBtn.addEventListener('click', function() {
@@ -177,67 +198,53 @@ button{border:none;background:none;cursor:pointer;font:inherit;color:inherit}
         fileName = '\u674e\u4fca\u5805.vcf';
       } else {
         langName = 'Caleb Lee';
-        langTitle = 'Marketing Consultant / Financial Planner';
+        langTitle = 'Marketing Consultant / Insurance & Financial Planner';
         langNote = 'Financial Planning | Incense Studio (Marketing & Design)\\nWeChat: caleb530lee';
         fileName = 'Caleb Lee.vcf';
       }
       var vcard = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        'FN:' + langName,
-        'N:;' + langName + ';;;',
-        'TITLE:' + langTitle,
-        'TEL;TYPE=CELL:+852 9673 9044',
-        'EMAIL:caleb530lee@gmail.com',
-        'URL:https://hk.linkedin.com/in/cklee530',
-        'NOTE:' + langNote,
-        'END:VCARD'
+        'BEGIN:VCARD','VERSION:3.0','FN:'+langName,'N:;'+langName+';;;',
+        'TITLE:'+langTitle,'TEL;TYPE=CELL:+852 6699 6544','EMAIL:caleb530lee@gmail.com',
+        'URL:https://hk.linkedin.com/in/cklee530','NOTE:'+langNote,'END:VCARD'
       ].join('\n');
-      var blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = fileName;
+      var blob=new Blob([vcard],{type:'text/vcard;charset=utf-8'});
+      var url=URL.createObjectURL(blob);
+      var a=document.createElement('a');
+      a.href=url;
+      a.download=fileName;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      var m = { 'en': 'Contact saved!', 'zh-HK': '聯絡人已儲存！', 'zh-CN': '联系人已保存！' };
-      showToast(m[lang] || m['en']);
+      var m={'en':'Contact saved!','zh-HK':'\u806f\u7d61\u4eba\u5df2\u5132\u5b58\uff01','zh-CN':'\u8054\u7cfb\u4eba\u5df2\u4fdd\u5b58\uff01'};
+      showToast(m[lang]||m['en']);
     });
   }
-
-  var wechat = document.getElementById('wechatBtn');
-  if (wechat) {
-    wechat.addEventListener('click', function(e) {
+  var wechat=document.getElementById('wechatBtn');
+  if(wechat){
+    wechat.addEventListener('click',function(e){
       e.preventDefault();
-      var id = 'caleb530lee';
-      var copy = navigator.clipboard && navigator.clipboard.writeText ?
-        navigator.clipboard.writeText(id) :
-        new Promise(function(resolve, reject) {
-          var ta = document.createElement('textarea');
-          ta.value = id;
-          ta.style.position = 'fixed';
-          ta.style.opacity = '0';
-          document.body.appendChild(ta);
-          ta.select();
-          try { document.execCommand('copy'); resolve(); } catch(e) { reject(); }
+      var id='caleb530lee';
+      var copy=navigator.clipboard&&navigator.clipboard.writeText?
+        navigator.clipboard.writeText(id):
+        new Promise(function(resolve,reject){
+          var ta=document.createElement('textarea');
+          ta.value=id;ta.style.position='fixed';ta.style.opacity='0';
+          document.body.appendChild(ta);ta.select();
+          try{document.execCommand('copy');resolve();}catch(e){reject();}
           document.body.removeChild(ta);
         });
-      copy.then(function() {
-        var m = { 'en': 'WeChat copied: caleb530lee', 'zh-HK': '微信已複製：caleb530lee', 'zh-CN': '微信已复制：caleb530lee' };
-        showToast(m[lang] || m['en']);
-      }).catch(function() {
-        showToast('WeChat: caleb530lee');
-      });
+      copy.then(function(){
+        var m={'en':'WeChat copied: caleb530lee','zh-HK':'\u5fae\u4fe1\u5df2\u8907\u88fd\uff1acaleb530lee','zh-CN':'\u5fae\u4fe1\u5df2\u590d\u5236\uff1acaleb530lee'};
+        showToast(m[lang]||m['en']);
+      }).catch(function(){showToast('WeChat: caleb530lee');});
     });
   }
-
-  function showToast(msg) {
-    var t = document.getElementById('toast');
-    t.textContent = msg;
+  function showToast(msg){
+    var t=document.getElementById('toast');
+    t.textContent=msg;
     t.classList.add('show');
-    setTimeout(function() { t.classList.remove('show'); }, 2200);
+    setTimeout(function(){t.classList.remove('show');},2200);
   }
 })();
 </script>
