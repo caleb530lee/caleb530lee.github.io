@@ -1,9 +1,245 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caleb Lee</title>
+<meta name="description" content="Caleb Lee - Marketing Consultant & Financial Planner">
+<meta name="theme-color" content="#f7f6f3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans SC','Noto Sans TC',Helvetica,Arial,sans-serif;background:#f7f6f3;color:#1a1a18;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{border:none;background:none;cursor:pointer;font:inherit;color:inherit}
+[data-lang]:not(.active){display:none}
+.container{max-width:420px;margin:0 auto;padding:0 20px}
+.divider{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.divider .line{flex:1;height:1px;background:#e2dfda}
+.divider .dot{width:4px;height:4px;border-radius:50%;background:#c8955a;flex-shrink:0}
+.divider .label{font-size:10px;font-weight:600;color:#a39e98;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap}
+.hero{padding:48px 20px 0;text-align:center}
+.avatar{width:68px;height:68px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block;background:#e8e5e0}
+.name{font-size:26px;font-weight:700;letter-spacing:-0.3px;line-height:1.15;margin-bottom:3px}
+.role{font-size:13px;font-weight:400;color:#7a736e;margin-bottom:0}
+.track{padding:24px 0 20px}
+.track-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.track-item{background:#fff;border-radius:10px;padding:14px 10px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.track-num{font-size:18px;font-weight:700;letter-spacing:-0.3px;line-height:1.15;margin-bottom:2px;color:#1e3a5f}
+.track-label{font-size:10px;font-weight:500;color:#7a736e;line-height:1.3;letter-spacing:0.01em}
+.connect{padding:0 0 20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;border-radius:10px;font-size:14px;font-weight:500;transition:all 0.12s;min-height:48px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn:active{transform:scale(0.97)}
+.btn-group{display:flex;flex-direction:column;gap:7px}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+.btn-save{background:#1e3a5f;color:#fff;font-weight:600;gap:9px;border:none}
+.btn-save:hover{background:#17314d}
+.btn-save svg{stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.btn-primary{background:#1e3a5f;color:#fff}
+.btn-primary:hover{background:#17314d}
+.btn-outline{background:#fff;color:#1a1a18;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.btn-outline:hover{background:#f7f6f3}
+.footer{text-align:center;padding:16px 20px 24px}
+.footer p{font-size:10px;color:#b5afab}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a1a18;color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:500;z-index:999;max-width:calc(100vw - 40px);text-align:center;opacity:0;transition:opacity 0.25s;pointer-events:none;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='68' viewBox='0 0 68 68'%3E%3Crect width='68' height='68' fill='%23e8e5e0' rx='34'/%3E%3Ctext x='34' y='42' text-anchor='middle' font-family='-apple-system,sans-serif' font-size='19' font-weight='600' fill='%23a09893'%3ECL%3C/text%3E%3C/svg%3E" alt="Caleb Lee">
+  <h1 class="name active" data-lang="en">Caleb Lee</h1>
+  <h1 class="name" data-lang="zh-HK">李凱立</h1>
+  <h1 class="name" data-lang="zh-CN">李凯立</h1>
+  <p class="role active" data-lang="en">Marketing Consultant · Financial Planner</p>
+  <p class="role" data-lang="zh-HK">市場營銷顧問 · 理財規劃師</p>
+  <p class="role" data-lang="zh-CN">市场营销顾问 · 理财规划师</p>
+</div>
+
+<div class="container">
+  <div class="track">
+    <div class="divider">
+      <span class="line"></span>
+      <span class="dot"></span>
+      <span class="label active" data-lang="en">Track Record</span>
+      <span class="label" data-lang="zh-HK">實績</span>
+      <span class="label" data-lang="zh-CN">实绩</span>
+      <span class="line"></span>
+    </div>
+    <div class="track-grid">
+      <div class="track-item">
+        <div class="track-num">10+</div>
+        <p class="track-label active" data-lang="en">Years Experience</p>
+        <p class="track-label" data-lang="zh-HK">年經驗</p>
+        <p class="track-label" data-lang="zh-CN">年经验</p>
+      </div>
+      <div class="track-item">
+        <div class="track-num">1st Honours</div>
+        <p class="track-label active" data-lang="en">CUHK</p>
+        <p class="track-label" data-lang="zh-HK">香港中文大學</p>
+        <p class="track-label" data-lang="zh-CN">香港中文大学</p>
+      </div>
+      <div class="track-item">
+        <div class="track-num">MSc ISM</div>
+        <p class="track-label active" data-lang="en">HKUST (Candidate)</p>
+        <p class="track-label" data-lang="zh-HK">香港科技大學 (修讀中)</p>
+        <p class="track-label" data-lang="zh-CN">香港科技大学 (修读中)</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="connect">
+    <div class="divider">
+      <span class="line"></span>
+      <span class="dot"></span>
+      <span class="label active" data-lang="en">Connect</span>
+      <span class="label" data-lang="zh-HK">聯絡</span>
+      <span class="label" data-lang="zh-CN">联系</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-save" id="saveContact">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        <span class="active" data-lang="en">Save Contact</span>
+        <span data-lang="zh-HK">儲存聯絡人</span>
+        <span data-lang="zh-CN">保存联系人</span>
+      </button>
+
+      <a class="btn btn-primary" href="https://wa.me/85296739044" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="active" data-lang="en">WhatsApp</span>
+        <span data-lang="zh-HK">WhatsApp</span>
+        <span data-lang="zh-CN">WhatsApp</span>
+      </a>
+
+      <div class="btn-row">
+        <a class="btn btn-outline" href="https://hk.linkedin.com/in/cklee530" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <button class="btn btn-outline" id="wechatBtn">
+          <svg viewBox="0 0 24 24" fill="#07c160"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045.247.247 0 00.242-.245c0-.06-.024-.12-.04-.178l-.325-1.233a.49.49 0 01.178-.554C23.028 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-7.062-6.122zM14.033 13.5c.535 0 .969.44.969.983a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.983.97-.983zm4.844 0c.535 0 .969.44.969.983a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.983.97-.983z"/></svg>
+          WeChat
+        </button>
+      </div>
+    </div>
+
+    <p style="font-size:10px;color:#b5afab;text-align:center;margin-top:10px">
+      <span class="active" data-lang="en">WeChat ID:caleb530lee</span>
+      <span data-lang="zh-HK">微信號：caleb530lee</span>
+      <span data-lang="zh-CN">微信号：caleb530lee</span>
+    </p>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="active" data-lang="en">&copy; 2026 Incense Studio</p>
+  <p data-lang="zh-HK">&copy; 2026 馨香工作室</p>
+  <p data-lang="zh-CN">&copy; 2026 馨香工作室</p>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+  var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  if (lang.startsWith('zh-cn') || lang.startsWith('zh-sg') || lang.startsWith('zh-my') || lang === 'zh') {
+    lang = 'zh-CN';
+  } else if (lang.startsWith('zh-hk') || lang.startsWith('zh-tw') || lang.startsWith('zh-mo')) {
+    lang = 'zh-HK';
+  }
+  document.querySelectorAll('[data-lang]').forEach(function(el) {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.documentElement.setAttribute('lang', lang);
+
+  var saveBtn = document.getElementById('saveContact');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', function() {
+      var langName, langTitle, langNote, fileName;
+      if (lang === 'zh-CN') {
+        langName = '\u674e\u4fca\u575a';
+        langTitle = '\u5e02\u573a\u8425\u9500\u987e\u95ee / \u7406\u8d22\u89c4\u5212\u5e08';
+        langNote = '\u7406\u8d22\u89c4\u5212 | Incense Studio\uff08\u5e02\u573a\u8425\u9500\u4e0e\u8bbe\u8ba1\uff09\\n\u5fae\u4fe1\uff1acaleb530lee';
+        fileName = '\u674e\u4fca\u575a.vcf';
+      } else if (lang === 'zh-HK') {
+        langName = '\u674e\u4fca\u5805';
+        langTitle = '\u5e02\u5834\u71df\u92b7\u9867\u554f / \u7406\u8ca1\u898f\u5283\u5e2b';
+        langNote = '\u7406\u8ca1\u898f\u5283 | Incense Studio\uff08\u5e02\u5834\u71df\u92b7\u8207\u8a2d\u8a08\uff09\\n\u5fae\u4fe1\uff1acaleb530lee';
+        fileName = '\u674e\u4fca\u5805.vcf';
+      } else {
+        langName = 'Caleb Lee';
+        langTitle = 'Marketing Consultant / Financial Planner';
+        langNote = 'Financial Planning | Incense Studio (Marketing & Design)\\nWeChat: caleb530lee';
+        fileName = 'Caleb Lee.vcf';
+      }
+      var vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:' + langName,
+        'N:;' + langName + ';;;',
+        'TITLE:' + langTitle,
+        'TEL;TYPE=CELL:+852 9673 9044',
+        'EMAIL:caleb530lee@gmail.com',
+        'URL:https://hk.linkedin.com/in/cklee530',
+        'NOTE:' + langNote,
+        'END:VCARD'
+      ].join('\n');
+      var blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      var m = { 'en': 'Contact saved!', 'zh-HK': '聯絡人已儲存！', 'zh-CN': '联系人已保存！' };
+      showToast(m[lang] || m['en']);
+    });
+  }
+
+  var wechat = document.getElementById('wechatBtn');
+  if (wechat) {
+    wechat.addEventListener('click', function(e) {
+      e.preventDefault();
+      var id = 'caleb530lee';
+      var copy = navigator.clipboard && navigator.clipboard.writeText ?
+        navigator.clipboard.writeText(id) :
+        new Promise(function(resolve, reject) {
+          var ta = document.createElement('textarea');
+          ta.value = id;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); resolve(); } catch(e) { reject(); }
+          document.body.removeChild(ta);
+        });
+      copy.then(function() {
+        var m = { 'en': 'WeChat copied: caleb530lee', 'zh-HK': '微信已複製：caleb530lee', 'zh-CN': '微信已复制：caleb530lee' };
+        showToast(m[lang] || m['en']);
+      }).catch(function() {
+        showToast('WeChat: caleb530lee');
+      });
+    });
+  }
+
+  function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2200);
+  }
+})();
+</script>
+</body>
 </html>
